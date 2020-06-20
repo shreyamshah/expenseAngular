@@ -1,0 +1,16 @@
+<p>login works!</p>
+<div class="container" fxLayout="column" fxLayoutGap="20px">
+    <mat-form-field appearance="standard">
+        <mat-label>Email</mat-label>
+        <input matInput placeholder="example@gmail.com" [formControl]="email" required>
+        <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="standard">
+        <mat-label>Password</mat-label>
+        <input matInput type="password" [formControl]="password" required>
+        <mat-error *ngIf="password.invalid">Password is required Field</mat-error>
+    </mat-form-field>
+    <br>
+    <button mat-raised-button (click)="login()">Login</button>
+</div>
