@@ -9,7 +9,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from "@angular/material/toolbar";
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
-import { ReactiveFormsModule } from "@angular/forms";
+import { ReactiveFormsModule, FormsModule } from "@angular/forms";
 import { MatButtonModule } from "@angular/material/button";
 import { MatListModule } from "@angular/material/list"; 
 import { MatCardModule } from "@angular/material/card";
@@ -20,6 +20,7 @@ import 'hammerjs';
 import { LoginComponent } from './login/login.component';
 import { ListExpenseComponent } from './list-expense/list-expense.component';
 import { ExpenseCardViewComponent } from './expense-card-view/expense-card-view.component';
+import { ListDetailComponent } from './list-detail/list-detail.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { ExpenseCardViewComponent } from './expense-card-view/expense-card-view.
     AppComponent,
     LoginComponent,
     ListExpenseComponent,
-    ExpenseCardViewComponent
+    ExpenseCardViewComponent,
+    ListDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +43,8 @@ import { ExpenseCardViewComponent } from './expense-card-view/expense-card-view.
     MatButtonModule,
     MatListModule,
     MatCardModule,
-    MatIconModule
+    MatIconModule,
+    FormsModule
   ],
   exports:[RouterModule],
   providers: [],

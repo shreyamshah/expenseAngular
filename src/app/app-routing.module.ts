@@ -1,3 +1,4 @@
+import { ListDetailComponent } from './list-detail/list-detail.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './login/login.component';
@@ -16,6 +17,10 @@ export const routes: Routes = [
   {
     path:"expense-list",
     component:ListExpenseComponent
+  },
+  {
+    path:'expense-detail',
+    component:ListDetailComponent
   }
 ];
 

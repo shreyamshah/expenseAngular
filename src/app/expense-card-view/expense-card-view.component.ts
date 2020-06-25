@@ -1,3 +1,4 @@
+import { ActivatedRoute, Router } from '@angular/router';
 import { Expense } from 'src/data/expense';
 import { Component, OnInit, Input } from '@angular/core';
 
@@ -10,11 +11,11 @@ export class ExpenseCardViewComponent implements OnInit {
   @Input("expense")
   item:Expense;
 
-  constructor() { }
+  constructor(private router:Router,private route:ActivatedRoute) { }
 
   ngOnInit(): void {
   }
   onCardClick() {
-    
+    this.router.navigate(['expense-detail'],{state:{'item':this.item}})
   }
 }

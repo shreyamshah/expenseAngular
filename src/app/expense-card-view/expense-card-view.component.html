@@ -1,5 +1,5 @@
-<span fxLayout="column" fxFlex="30" fxFlex.xs="100" fxFlexAlign="start start" (click)="onCardClick()">
-    <mat-card>
+<span fxLayout="column" fxFlex="30" fxFlex.xs="100" fxFlexAlign="start start">
+    <mat-card (click)="onCardClick()">
         <mat-card-subtitle>{{item.category | uppercase}}</mat-card-subtitle>
         <mat-card-content>
             <div fxLayout="row">
