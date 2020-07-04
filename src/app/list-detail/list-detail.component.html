@@ -1,15 +1,22 @@
-<p>list-detail works!</p>
-<div fxLayout="column" fxLayoutGap="10px">
-    <mat-form-field appearance="standard">
-        <mat-label>Category</mat-label>
-        <input matInput placeholder="Category" [disabled]="isView" [ngModel]="expense.category" required>
-    </mat-form-field>
-    <mat-form-field appearance="standard">
-        <mat-label>Amount</mat-label>
-        <input matInput placeholder="Amount" [disabled]="isView" [ngModel]="expense.amount" required>
-    </mat-form-field>
-    <mat-form-field appearance="fill">
-        <mat-label>Description</mat-label>
-        <textarea matInput placeholder="Enter Description" [disabled]="isView">{{expense.description}}</textarea>
-    </mat-form-field>
+<span class="overlay">
+    <mat-icon matListIcon (click)="onCloseClick()">close</mat-icon>
+</span>
+<div fxLayout="column" fxFlex fxFlexFill class="edits">
+    <div fxFlex='30px' fxLayout="row" fxLayoutAlign="end start" fxLayoutOrder="1" fxFlexAlign.lt-md="center">
+        <mat-icon matListIcon (click)="onEditClick()">edit</mat-icon>
+    </div>
+    <div fxLayout="column" fxLayoutAlign="start stretch" fxLayoutOrder="2" fxFlex>
+        <mat-form-field appearance="standard">
+            <mat-label>Category</mat-label>
+            <input matInput placeholder="Category" [disabled]="isView" [ngModel]="expense.category" required>
+        </mat-form-field>
+        <mat-form-field appearance="standard">
+            <mat-label>Amount</mat-label>
+            <input matInput placeholder="Amount" [disabled]="isView" [ngModel]="expense.amount" required>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Description</mat-label>
+            <textarea matInput placeholder="Enter Description" [disabled]="isView">{{expense.description}}</textarea>
+        </mat-form-field>
+    </div>
 </div>

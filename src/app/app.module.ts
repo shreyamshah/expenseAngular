@@ -21,6 +21,9 @@ import { LoginComponent } from './login/login.component';
 import { ListExpenseComponent } from './list-expense/list-expense.component';
 import { ExpenseCardViewComponent } from './expense-card-view/expense-card-view.component';
 import { ListDetailComponent } from './list-detail/list-detail.component';
+import { ExpenseService } from './Services/expense.service';
+import { MatRippleModule } from '@angular/material/core';
+import { OverlayModule, OVERLAY_PROVIDERS } from "@angular/cdk/overlay";
 
 
 @NgModule({
@@ -44,10 +47,11 @@ import { ListDetailComponent } from './list-detail/list-detail.component';
     MatListModule,
     MatCardModule,
     MatIconModule,
-    FormsModule
+    FormsModule,
+    MatRippleModule
   ],
   exports:[RouterModule],
-  providers: [],
+  providers: [ExpenseService,OVERLAY_PROVIDERS],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,16 +1,16 @@
-<span fxLayout="column" fxFlex="30" fxFlex.xs="100" fxFlexAlign="start start">
-    <mat-card (click)="onCardClick()">
-        <mat-card-subtitle>{{item.category | uppercase}}</mat-card-subtitle>
-        <mat-card-content>
-            <div fxLayout="row">
-                <div fxLayout="column" fxFlex="95" fxLayoutAlign="center start">
-                    <mat-label matLine>{{item.date | date:'dd-MMM-yyyy hh:mm a'}}</mat-label>
-                    <mat-label matLine>Amount: {{item.amount | currency:"&#8377;"}}</mat-label>
+<span matRipple fxLayout="column" fxFlex="30" fxFlex.xs="100" fxFlexAlign="start start">  
+        <mat-card (click)="onCardClick()" #cardView>
+            <mat-card-subtitle>{{item.category | uppercase}}</mat-card-subtitle>
+            <mat-card-content>
+                <div fxLayout="row">
+                    <div fxLayout="column" fxFlex="95" fxLayoutAlign="center start">
+                        <mat-label matLine>{{item.date | date:'dd-MMM-yyyy hh:mm a'}}</mat-label>
+                        <mat-label matLine>Amount: {{item.amount | currency:"&#8377;"}}</mat-label>
+                    </div>
+                    <div fxLayout="column" fxFlex="5" fxFlexAlign="center end">
+                        <mat-icon matListIcon>keyboard_arrow_right</mat-icon>
+                    </div>
                 </div>
-                <div fxLayout="column" fxFlex="5" fxFlexAlign="center end">
-                    <mat-icon matListIcon>keyboard_arrow_right</mat-icon>
-                </div>
-            </div>
-        </mat-card-content>
-    </mat-card>
+            </mat-card-content>
+        </mat-card>  
 </span>
